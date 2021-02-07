@@ -6,8 +6,11 @@ feature 'Viewing bookmarks' do
 
     visit('/bookmarks')
 
-    expect(page).to have_link('Makers Academy', href: 'http://www.makersacademy.com')
-    expect(page).to have_link('Facebook', href: 'http://www.facebook.com')
-    expect(page).to have_link('Twitter', href: 'http://www.twitter.com')
+    expect(page).to have_content('Makers Academy')
+    expect(page).to have_content('http://www.makersacademy.com')
+    expect(page).to have_content('Facebook')
+    expect(page).to have_content('Twitter')
+    expect(page).to have_content('http://www.facebook.com')
+    expect(page).to have_content('http://www.twitter.com')
   end
 end
